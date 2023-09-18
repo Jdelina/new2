@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style> 
+  * {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	background: #161616;
+	min-height: 100vh;
+}
+
+section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#DA22FF, #9733EE);
+	clip-path: circle(30% at right 70%);
+}
+
+section::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#E55D87, #5FC3E4);
+	clip-path: circle(20% at 10% 10%);
+}
+
+.container {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 90px 0;
+}
+
+.container .card {
+	position: relative;
+	width: 300px;
+	height: 400px;
+	background: rgba(255, 255, 255, 0.05);
+	margin: 20px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(10px);
+}
+
+.container .card .content {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: 0.5s;
+}
+
+.container .card:hover .content {
+	transform: translateY(-20px);
+}
+
+.container .card .content .imgBx {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+}
+
+.container .card .content .imgBx img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.container .card .content .contentBx h3 {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 500;
+	font-size: 18px;
+	text-align: center;
+	margin: 20px 0 10px;
+	line-height: 1.1em;
+}
+
+.container .card .content .contentBx h3 span {
+	font-size: 12px;
+	font-weight: 300;
+	text-transform: initial;
+}
+
+.container .card .sci {
+	position: absolute;
+	bottom: 50px;
+	display: flex;
+}
+
+.container .card .sci li {
+	list-style: none;
+	margin: 0 10px;
+	transform: translateY(40px);
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.container .card:hover .sci li {
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+.container .card .sci li a  {
+	color: #fff;
+	font-size: 20px;
+}
+
+
+p {
+  color: #fff;
+  font-size: 17px;
+  text-align: center;
+}
+
+button {
+  background-color: #bef1c0;
+  border: none;
+  color: rgb(21, 19, 19);
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 15px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  
+}
+  
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+  
+  
+  </style>
+
+
+
+
+</head>
+<body>
+    <section>
+      <div class="container">
+        <div class="card">
+          <div class="content">
+            <div class="imgBx">
+              <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQ5pAUkFjASncLgVEsqVbwyTj0LP1ObO85jakWZEibYYmjHzzQux9-C1zQ2DXiZnAldF_l5_EXyZXQqQf4">
+            </div>
+            <div class="contentBx">
+              <h3>Puspin<br><span>Puspins (short for Pusang Pinoy or Pinoy cat) are cats of no specific breed. They have short coats with any combination of coat colours. </span></h3>
+            </div>
+          </div>
+          <ul class="sci">
+            <li>
+              <a href="#">Origin</a>
+            </li>
+            <li>
+              <a href="#">Pattern</a>
+            </li>
+            <li>
+              <a href="#">Adopt</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="content">
+            <div class="imgBx">
+              <img src="https://www.catster.com/wp-content/uploads/2018/11/persian-cat-face.jpg.optimal.jpg">
+            </div>
+            <div class="contentBx">
+              <h3>Persian</h3>
+            </div>
+          </div>
+          <ul class="sci">
+            <li>
+              <p> Persian Cats are known for their gentle, quiet, docile nature. They are very sweet cats </p>
+            </li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="content">
+            <div class="imgBx">
+              
+              <img src="https://images.squarespace-cdn.com/content/v1/5c6494bbf4e5310e57b3de34/1623611054108-INRZYAVKEK0GULVPSJU8/Capture.PNG">
+            </div>
+            <div class="contentBx">
+              <h3></h3>
+            </div>
+          </div>
+          <ul class="sci">
+            <li>
+              <p>Siamese cat is one of the first distinctly recognized breeds of Asian cat.</p> <br>
+              <span><center><button class="button button1">Adopt Me</button> </center> </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+</body>
+</html>
